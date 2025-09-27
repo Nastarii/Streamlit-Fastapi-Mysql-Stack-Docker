@@ -1,4 +1,9 @@
-[loggers]
+import dotenv
+import os
+
+dotenv.load_dotenv()
+
+ALEMBIC_TEMPLATE = f"""[loggers]
 keys=root,sqlalchemy,alembic
 
 [handlers]
@@ -33,4 +38,5 @@ format=%(levelname)-5.5s [%(name)s] %(message)s
 [alembic]
 script_location = db
 
-sqlalchemy.url = mysql+pymysql://user:password@mysql-db:3306/app_db
+sqlalchemy.url = {os.getenv("DATABASE_URL")}
+"""

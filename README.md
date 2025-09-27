@@ -28,6 +28,9 @@ This project is a web application built using **Streamlit**, **FastAPI**, and **
     git clone https://github.com/your-username/your-repo.git
     cd your-repo
     ```
+### Edit Environment Variable
+
+Remove `.example` from .env files and edit your database configurations, remember to always match the .env from server and database
 
 ### Running the Application
 
